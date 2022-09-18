@@ -1,5 +1,6 @@
 // Write your own version of the lodash _.matchesProperty function using vanilla JavaScript. matchesProperty returns a function that that compares the given object and a path, which is a key-value pair, then determines if the object includes the pair.
 
+//  Step 1: Solution:
 function matchesProperty_myVersion(key, value){
  return function(item){
    if(item[key] === value){
@@ -9,3 +10,17 @@ function matchesProperty_myVersion(key, value){
  } 
 }
 
+// Step 2: Refactor to 'if'
+function matchesProperty_myVersion(key, value){
+  return function(item){
+    return item[key] === value)
+ } 
+
+// Step 3: Refactor by using ES6 Arrow functions:
+const matchesProperty = (key, value) {
+  return (item) => {
+    return item[key] === value;
+ } 
+ 
+// Step 4: Refactor with implicit returns:
+const matchesProperty = (key, value) => item => item[key] === value;
