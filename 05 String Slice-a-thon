@@ -1,0 +1,13 @@
+// Arrow Functions
+const challenge1 = text => text.slice(0,5);
+const challenge2 = text => text.slice(text.length - 5);
+const challenge3 = text => text.split('').reverse().join('');
+const challenge4 = text => text.slice(0,6).split('').reverse().join('');
+const challenge5 = text => text.slice(text.length - 7).split('').filter((item, index) => (index + 1) % 2 === 1).join('')
+
+
+console.log(challenge1("abcdefghijklmnopqrstuvwxyz")) // "abcde"
+console.log(challenge2("abcdefghijklmnopqrstuvwxyz")) // "vwxyz"
+console.log(challenge3("abcdefghijklmnopqrstuvwxyz")) // "zyxwvutsrqponmlkjihgfedcba"
+console.log(challenge4("abcdefghijklmnopqrstuvwxyz")) // "fedcba"
+console.log(challenge5("abcdefghijklmnopqrstuvwxyz")) // "tvxz"
