@@ -1,0 +1,24 @@
+// You have two arrays. One shows the names of the people names, while the other shows their occupation jobs. Your task is to create an object displaying each person to their respective occupation.
+
+function assignPersonToJob(names, jobs) {
+	let obj = {}
+  for (let i = 0; i < names.length; i++){
+    for (let j = 0; j < jobs.length; j++){
+      obj[names[i]] = jobs[i]; 
+    }
+  }
+  return obj
+}
+
+const names = ["Dennis", "Vera", "Mabel", "Annette", "Sussan"]
+const jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"]
+
+console.log(assignPersonToJob(names, jobs)) 
+
+// {
+//   Dennis: "Butcher",
+//   Vera: "Programmer",
+//   Mabel: "Doctor",
+//   Annette: "Teacher",
+//   Sussan: "Lecturer"
+// }
