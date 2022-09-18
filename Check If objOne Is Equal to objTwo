@@ -1,0 +1,43 @@
+// Create a function that checks to see if two object arguments are equal to one another. Return true if the objects are equal, otherwise, return false.
+
+function isEqual(objOne, objTwo) {
+  for (const x in objOne){
+    for (const y in objTwo){
+      return true ? objOne[x] === objTwo[y] : false;
+    }
+  }
+}
+
+const isEqual = (objOne, objTwo) => 
+
+
+
+console.log(isEqual(
+  {
+    name: "Benny",
+    phone: "3325558745",
+    email: "benny@edabit.com"
+  },
+  {
+  name: "Jason",
+  phone: "9853759720",
+  email: "jason@edabit.com"
+  }
+));
+
+// false
+
+console.log(isEqual(
+{
+  name: "Jason",
+  phone: "9853759720",
+  email: "jason@edabit.com"
+},
+{
+  name: "Jason",
+  phone: "9853759720",
+  email: "jason@edabit.com"
+}
+));
+
+// true
