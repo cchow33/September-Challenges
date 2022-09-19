@@ -1,0 +1,19 @@
+// Write a function that inverts the keys and values of an object.
+
+function invert(o) {
+  let newObj = {}
+  for (let key in o){
+    newObj[o[key]] = key;
+  }
+  return newObj
+}
+
+
+console.log(invert({ "z": "q", "w": "f" })) 
+// { "q": "z", "f": "w" }
+
+console.log(invert({ "a": 1, "b": 2, "c": 3 }))
+// { 1: "a", 2: "b", 3: "c" }
+
+console.log(invert({ "zebra": "koala", "horse": "camel" }))
+// { "koala": "zebra", "camel": "horse" }
