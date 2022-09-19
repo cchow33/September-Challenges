@@ -1,5 +1,17 @@
 // Given an object of how many questions a person has completed of each difficulty, return how many experience points they'll have.
 
+// SOLUTION 1:
+function getXP(obj){
+  let totalPoints = 0;
+  
+  for (let x in obj){
+    totalPoints += (obj[x] * xp[x])
+  }
+  return totalPoints + 'XP'
+}
+
+
+// SOLUTION 2: using REDUCE
 function getXP(obj) {
   let object = Object.values(obj) // 89, 77, 30, 4, 1
   let xp = [5, 10, 20, 40, 80]
