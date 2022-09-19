@@ -1,0 +1,33 @@
+// Given an object of how many questions a person has completed of each difficulty, return how many experience points they'll have.
+
+function getXP(obj) {
+  let object = Object.values(obj) // 89, 77, 30, 4, 1
+  let xp = [5, 10, 20, 40, 80]
+  return object.map((item, index) => item * xp[index])
+    .reduce((a,b) => a + b)
+}
+
+
+console.log(getXP(
+  {
+    "Very Easy" : 89,
+    "Easy" : 77,
+    "Medium" : 30,
+    "Hard" : 4,
+    "Very Hard" : 1
+  }
+))  
+
+// "2055XP"
+
+console.log(getXP(
+  {
+    "Very Easy" : 254,
+    "Easy" : 32,
+    "Medium" : 65,
+    "Hard" : 51,
+    "Very Hard" : 34
+  }
+)) 
+
+// "7650XP"
